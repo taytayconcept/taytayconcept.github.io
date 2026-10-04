@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC PORTFOLIO</title>
+    <link rel="icon" href="images/DNC EVENTS LOGO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="phoneresponsive.css">
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <div class="logo">
+           <a href="index.html">
+        <img src="images/DNC EVENTS LOGO.png" alt="DNC Events Logo">
+    </a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        <div class="dropdown">
+           <a class="dropbtn">Catering</a>
+        <div class="dropdown-content">
+            <a href="services.html">Services</a>
+            <a href="packages.html">Packages</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        </div>
+            <a href="inquire.html">Inquire</a>
+            <a href="booking.html">Booking</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+    <div class="hero-content">
+       <img src="images/PORTFOLIO - HERO.png" srcset="images/HERO - HOMEPAGE.png 1920w, images/HERO - HOMEPAGE.png 3840w" alt="NC Events">
+            <a href="inquire.html">
+            <button class="hero-btn">INQUIRE NOW! →</button>
+            </a>
+        </div>
+    </section> 
+
+    <div> <h1>OUR PORTFOLIO</h1></div>
+<div class="gallery">
+
+    <div class="box wedding" onclick="openGallery('wedding')">
+        <img src="images/PORTFOLIO - ALL IN WEDDING.png">
+        <div class="img-text">ALL-IN WEDDING RECEPTION</div>
+    </div>
+
+    <div class="box basic" onclick="openGallery('basic')">
+        <img src="images/PORTFOLIO - BASIC WEDDING.jpg">
+        <div class="img-text">BASIC WEDDING RECEPTION</div>
+    </div>
+
+    <div class="box christening" onclick="openGallery('christening')">
+        <img src="images/PORTFOLIO - GENDER REVEAL.jpg">
+        <div class="img-text">BAPTISM / GENDER REVEAL</div>
+    </div>
+
+    <div class="box debut" onclick="openGallery('debut')">
+        <img src="images/PORTFOLIO - DEBUT & MILESTONE.jpg">
+        <div class="img-text">DEBUT / MILESTONE</div>
+    </div>
+
+    <div class="box kiddie" onclick="openGallery('kiddie')">
+        <img src="images/PORTFOLIO - KIDDIE BIRTHDAY PARTY.jpg">
+        <div class="img-text">KIDDIE BIRTHDAY PARTY</div>
+    </div>
+
+<div class="clear"></div>
+</div>
+
+</div>
+</main>
+
+<!-- CALL TO ACTION -->
+
+        <section class="cta-section">
+
+            <h2>LET US PLAN YOUR <span>SPECIAL EVENT!</span></h2>
+
+            <p>READY TO CREATE UNFORGETTABLE MEMORIES?</p>
+                <p>GET IN TOUCH WITH US TODAY AND LET'S BRING YOUR VISION TO LIFE! ✨</p>
+
+                <a href="inquire.html">
+            <button class="cta-btn">
+                INQUIRE NOW! →
+            </button>
+            </a>
+        </section>
+
+        <!-- BACK TO TOP BUTTON BELOW CTA -->
+         <div class="back-to-top-text">
+             <a href="#" id="back-to-top">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 15 12 9 18 15"></polyline>
+                    <polyline points="6 9 12 3 18 9"></polyline>
+            </svg>
+            </a>
+        </div>
+
+<!--eto dinagdag ko, para sa gallery-->
+        
+        <div id="galleryModal" class="modal">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <div class="modal-content" id="galleryContent"></div>
+        </div>
+        <div id="zoomModal">
+            <span id="zoomClose" onclick="closeZoom()">&times;</span>
+            <span id="prevBtn" class="modal-nav" onclick="changeImage(-1)">&#10094;</span>
+            <img id="zoomImg">
+            <span id="nextBtn" class="modal-nav" onclick="changeImage(1)">&#10095;</span>
+        </div>
+
+        <!-- FOOTER -->
+
+    <footer class="footer">
+    <div class="footer-content">
+
+        <!-- LEFT -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="images/DNC EVENTS LOGO.png" alt="">
+            </div>
+
+            <p class="footer-description">
+                DNC Events offers affordable 
+                catering services with elegant 
+                buffet styling and professional 
+                event coordination for seamless, 
+                memorable celebrations.
+            </p>
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer-center">
+            <h3>CONTACT US</h3>
+            <p>🕖 7:00 AM - 10:00 PM | Monday - Sunday</p>
+            <p>📍 Lwood Street Javier Compound
+            Brgy. Dolores, Taytay, Rizal</p>
+            <p>📞 0956 251 3213</p>
+
+            <div class="footer-bottom-social">
+                <a href="https://www.facebook.com/share/14QaafsE15N/?mibextid=wwXIfr"><img src="images/FOOTER - FACEBOOK ICON.png"></a>
+                <a href="https://www.instagram.com/hiiamdanica?igsh=emtkZmtjdzR0ZDdv"><img src="images/FOOTER - IG ICON.png"></a>
+                <a href="https://www.tiktok.com/@dncevents?_r=1&_t=ZS-94Y4OxuLlOC"><img src="images/FOOTER - TIKTOK ICON.png"></a>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+            <h3>QUICK LINKS</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="packages.html">Packages</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="inquire.html">Inquire</a>
+                <a href="booking.html">Booking</a>
+            </div>
+        </div>
+
+            <div class="footer-copy">
+                Copyright © 2026 DNC Events. All Rights Reserved.
+        </div>
+    </footer>
+<script src="portfolio.js"></script>
+
+</body>
+</html>

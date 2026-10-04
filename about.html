@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC ABOUT</title>
+    <link rel="icon" href="images/TAYTAY_CONCEPT_LOGO_V1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="phoneresponsive.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/N2.png" alt="DNC Events Logo">
+            </a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a class="dropbtn">Catering</a>
+                <div class="dropdown-content">
+                    <a href="services.html">Services</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="faqs.html">FAQs</a>
+                </div>
+            </div>
+            <a href="inquire.html">Inquire</a>
+            <a href="booking.html">Booking</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/ABOUT US - HERO.png" srcset="images/HERO - HOMEPAGE.png 1920w, images/HERO - HOMEPAGE.png 3840w" alt="NC Events">
+        </div>
+    </section> 
+
+    <div class="section-line"></div>
+    
+    <!-- OUR STORY SECTION -->
+    <div class="story">
+        <h2>OUR STORY</h2>
+        <p>
+            DNC Events Styling Services started with a simple vision—and an empty lot.
+            In a neighborhood where homes had limited space, many families struggled to find a proper venue for their celebrations. Birthdays, weddings, 
+            and gatherings were often held in cramped areas, making it difficult to fully enjoy special moments. Seeing this need, an idea was born to transform an unused empty lot into a place where people could celebrate freely.
+        </p>
+        <p>
+            As more clients came, their needs grew beyond just a venue.
+            They wanted beautifully designed events—cohesive themes, elegant decorations, and personalized touches. 
+            This inspired the business to expand into event styling services, turning ordinary celebrations into visually stunning experiences.
+            Soon after, catering services were introduced to provide a complete event solution. From food to styling, 
+            DNC Events Styling Services evolved into a one-stop shop—making event planning easier, smoother, and more enjoyable for every client.
+        </p>
+    </div>
+
+    <!-- INSERTED PORTFOLIO IMAGES RIGHT AFTER OUR STORY -->
+        <div class="gallery">
+            <div class="box wedding" onclick="openGallery('wedding')">
+                <img src="images/PORTFOLIO - ALL IN WEDDING.png" alt="All-In Wedding">
+            </div>
+
+            <div class="box basic" onclick="openGallery('basic')">
+                <img src="images/PORTFOLIO - BASIC WEDDING.jpg" alt="Basic Wedding">
+            </div>
+
+            <div class="box christening" onclick="openGallery('christening')">
+                <img src="images/PORTFOLIO - GENDER REVEAL.jpg" alt="Baptism / Gender Reveal">
+            </div>
+
+            <div class="box debut" onclick="openGallery('debut')">
+                <img src="images/PORTFOLIO - DEBUT & MILESTONE.jpg" alt="Debut / Milestone">
+            </div>
+
+            <div class="box kiddie" onclick="openGallery('kiddie')">
+                <img src="images/PORTFOLIO - KIDDIE BIRTHDAY PARTY.jpg" alt="Kiddie Birthday">
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- MISSION / VISION CARDS -->
+    <section>
+        <div class="card-container">
+            <div class="card">
+                <h3>OUR MISSION</h3>
+                <p>To provide exceptional event services that exceed expectations and create lasting memories.</p>
+            </div>
+
+            <div class="card">
+                <h3>OUR VISION</h3>
+                <p>To become a leading event planning company known for creativity and excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEET THE FOUNDER -->
+    <section>
+        <h2>MEET THE FOUNDER</h2>
+        <div class="founder">
+            <h3>Ms. Danica Leonen</h3>
+            <p>
+                With a passion for design and event planning, Ms. Danica Leonen 
+                leads DNC Events with creativity and dedication. Her attention to 
+                detail ensures every event is a success.
+            </p>
+        </div>
+    </section>
+
+    <!-- COMMITMENT -->
+    <section class="commitment">
+        <h2>OUR COMMITMENT TO YOU</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Quality</h3>
+                <p>We ensure top-quality services in every event.</p>
+            </div>
+
+            <div class="card">
+                <h3>Reliability</h3>
+                <p>We deliver on time and meet expectations.</p>
+            </div>
+
+            <div class="card">
+                <h3>Personalization</h3>
+                <p>Every event is tailored to your needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-line"></div>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+        <h2>LET US PLAN YOUR <span>SPECIAL EVENT!</span></h2>
+        <p>READY TO CREATE UNFORGETTABLE MEMORIES?</p>
+        <p>GET IN TOUCH WITH US TODAY AND LET'S BRING YOUR VISION TO LIFE! ✨</p>
+        <a href="inquire.html">
+            <button class="cta-btn">INQUIRE NOW! →</button>
+        </a>
+    </section>
+    
+    <!-- BACK TO TOP BUTTON -->
+    <div class="back-to-top-text">
+        <a href="#" id="back-to-top">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 15 12 9 18 15"></polyline>
+                <polyline points="6 9 12 3 18 9"></polyline>
+            </svg>
+        </a>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- LEFT -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="images/DNC EVENTS LOGO.png" alt="DNC Events Logo">
+                </div>
+                <p class="footer-description">
+                    DNC Events offers affordable catering services with elegant 
+                    buffet styling and professional event coordination for seamless, 
+                    memorable celebrations.
+                </p>
+            </div>
+
+            <!-- CENTER -->
+            <div class="footer-center">
+                <h3>CONTACT US</h3>
+                <p>7:00 AM - 10:00 PM | Monday - Sunday</p>
+                <p>📍 Lwood Street Javier Compound Brgy. Dolores, Taytay, Rizal</p>
+                <p>📞 0956 251 3213</p>
+                <div class="footer-bottom-social">
+                    <a href="https://www.facebook.com/share/14QaafsE15N/?mibextid=wwXIfr"><img src="images/FOOTER - FACEBOOK ICON.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/hiiamdanica?igsh=emtkZmtjdzR0ZDdv"><img src="images/FOOTER - IG ICON.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@dncevents?_r=1&_t=ZS-94Y4OxuLlOC"><img src="images/FOOTER - TIKTOK ICON.png" alt="TikTok"></a>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="footer-right">
+                <h3>QUICK LINKS</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="packages.html">Packages</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="inquire.html">Inquire</a>
+                <a href="booking.html">Booking</a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            Copyright © 2026 DNC Events. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+    <!-- Include JavaScript functions for the interactive portfolio mechanics if required -->
+    <script src="portfolio.js"></script> 
+</body>
+</html>

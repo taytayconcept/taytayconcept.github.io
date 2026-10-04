@@ -1,0 +1,671 @@
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins';
+            background: #92487A;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        /* NAVBAR */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 80px;
+            background: #3a0519;
+            position: sticky;   /* <- eto binago ko para kapag iniiscroll di nawawala yung header */
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #ff7b9c;
+            font-weight: 600;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 12px;
+            color: #ccc;
+        }
+        
+        nav {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            color: #FCF5EE;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #92487A;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: relative;
+            display: flex;
+        }
+
+        .dropbtn {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #3a0519;
+            min-width: 130px;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .dropdown-content a {
+            padding: 12px 15px;
+            display: block;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .dropdown-content a:hover {
+            background: #92487A;
+            color: #FFEDFA;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* HAMBURGER (hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 900;
+}
+
+.overlay.show {
+    display: block;
+}
+
+        .logo {
+            margin-right: auto;
+            display:flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img { 
+            position: absolute;
+            left: 50px;
+            top: 15px;
+            height: 80px;
+            width: 100px;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .hero-content {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero-content img {
+            opacity: 80%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-btn {
+            position: absolute;
+            top: 85%; /* adjustan yan sha para sa perfect placement */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            border: 2px #56021F;
+            background: #E7BCDE;
+            color: #56021F;  
+            border-radius: 10px;   
+            cursor: pointer;     
+            font-family: 'Times New Roman', serif;       
+            font-weight: bold;    
+            font-size: 24px;
+            z-index: 2; /* pang sure na it's above everything */
+        }
+        .hero-btn:hover {
+            background: #7d1c4a;
+            color: #FFEDFA;
+        }
+
+        .gallery {
+            width: 90%;
+            margin: auto;
+            padding: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 0 0 40px black;
+        }
+
+        .box {
+            width: calc(33.33% - 50px);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 10px 25px rgb(255, 78, 166);
+        }
+
+        .box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.4s ease;
+        }
+
+        .box:hover img {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+        }
+
+        .clear{
+            clear:both;
+        }
+
+        .img-text{
+            bottom:15px;
+            left:15px;
+            background: #56021f6c;
+            padding:10px 16px;
+            border-radius:6px;
+            font-size:24px;   
+            color: #FFEDFA;      
+            font-weight:bold; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+        /* CALL TO ACTION */
+
+        .cta-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("cta-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 50px 20px;
+            text-align: center;
+            max-width: 1200px; /* limit ng width */
+            margin: 0 auto 50px auto;  /* para ma-center horizontally */
+            border-radius: 12px; /* optional, para rounded edges */
+        }
+
+        .cta-section h2{
+            font-family: 'Times New Roman', serif;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section h2 span{
+            color: #ffb2b2;
+        }
+
+        .cta-section p{
+            color: #ccc;
+            font-size: 16px;
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            padding: auto;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        .cta-btn{
+            padding: 14px 30px;
+            background: #E7BCDE;
+            border: none;
+            color: #56021F;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .cta-btn:hover{
+            background: #56021F;
+            color: #FFEDFA;
+        }
+
+
+        /* FOOTER HOMEPAGE */
+        footer {
+            background: #3a0519;
+            padding: 20px 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        /* 3 COLUMNS LAYOUT */
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            max-width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        /* LEFT */
+        .footer-left {
+            flex: 1.2;
+            min-width: 250px;
+        }
+
+        .footer-logo img {
+            width: 280px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .footer-description {
+            margin: 3px 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* CENTER (CONTACT INFO) */
+        .footer-center {
+            flex: 1;
+            min-width: 220px;
+            text-align: left;
+            margin-top: 25px;
+            margin-left: 120px;
+        }
+
+        .footer-center h3 {
+            margin-bottom: 6px;
+        }
+
+        .footer-center p {
+            margin: 3px 0;
+        }
+
+        /* RIGHT (QUICK LINKS) */
+        .footer-right {
+            flex: 1;
+            min-width: 200px;
+            text-align: left;
+
+            margin-top: 25px;
+            margin-left: 200px;
+        }
+
+        .footer-right h3 {
+            margin-bottom: 6px;
+        }
+
+        /* LINKS */
+        .footer-right a,
+        .footer-dropdown span {
+            display: block;
+            color: #FCF5EE;
+            text-decoration: none;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+
+        .footer-right a:hover {
+            color: #FF9BD2;
+        }
+
+        /* SOCIAL */
+        .footer-bottom-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            
+        }
+
+        .footer-bottom-social img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            transition: 0.3s;
+            border-radius: 10px;
+            margin-left: -150%;
+            
+        }
+
+        .footer-bottom-social img:hover {
+            transform: scale(1.2);
+        }
+
+        /* COPYRIGHT */
+        .footer-copy {
+            margin-top: 8px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* nilagay ko para sa pull to the top */
+        .back-to-top-text {
+        text-align: center;  /* pang center nung text */
+        margin: 20px 0;      /* spacing sya above/below (vertical) */
+        }
+        .back-to-top-text a {    
+            display: inline-block; /* need sya for animation */
+            animation: jump 1s infinite; /* ito yung jumping animation */
+        }
+        .back-to-top-text a:hover {
+            color: #FFEDFA;
+        }
+        /* Jumping animation */
+        
+        @keyframes jump {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+        transform: translateY(-8px); /* yung jump height nya*/
+            }
+        }
+
+        /* gallery */
+ 
+        .modal {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+
+        /* images animation */
+        .modal-content img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            transform: scale(0.8);
+            opacity: 0;
+            animation: popIn 0.4s forwards;
+        }
+
+        @keyframes popIn {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+
+
+        #zoomModal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #zoomModal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        #zoomModal img {
+            width: 80vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 12px;
+
+            transform: scale(0.7);
+            transition: transform 0.3s ease;
+        }
+
+        #zoomModal.show img {
+            transform: scale(1);
+        }
+
+        /* GALLERY MODAL FIX */
+        .modal {
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* kapag open */
+        .modal.show {
+            display: flex;
+        }
+
+        /* content layout */
+        .modal-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 90%;
+            max-height: 80vh;     
+            overflow-y: auto;    
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        /* close button */
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        /* Navigation arrows */
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px;
+            z-index: 4000;
+            background: rgba(0,0,0,0.3);
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .modal-nav:hover {
+            background: rgba(0,0,0,0.6);
+        }
+
+        #prevBtn {
+            left: 20px;
+        }
+
+        #nextBtn {
+            right: 20px;
+        }
+
+        #zoomClose {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+            z-index: 4000;
+            user-select: none;
+            background: rgba(0,0,0,0.3);
+            border-radius: 50%;
+            padding: 5px 12px;
+            transition: 0.3s;
+        }
+
+        #zoomClose:hover {
+            background: rgba(0,0,0,0.6);
+        }
+
+   .fade-in {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        /* ================= TABLET ONLY (iPad standard) ================= */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 30px 40px;
+    }
+
+    .hero {
+        height: 55vh;
+    }
+
+    .hero-content {
+        height: 55vh !important;
+    }
+
+    .hero-content img {
+        height: 50vh !important;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-btn {
+        top: 76%;
+    }
+
+    .gallery {
+    width: 100%;
+    padding: 40px 30px;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* KEEP 3 columns but fix spacing */
+.box {
+    width: calc(33.33% - 20px); /* ❗ reduced gap compensation */
+}
+
+
+    .cta-section {
+        padding: 50px;
+        width: 100%;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+
+
+    /* ================= FOOTER ================= */
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .footer-center,
+.footer-right {
+    margin-left: 0 !important;
+}
+
+    .footer-logo img {
+        width: 220px;
+    }
+
+    .footer-bottom-social img {
+        margin-left: 0;
+        width: 50px;
+        height: 50px;
+    }
+}

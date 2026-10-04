@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman';
+    background: #92487A;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    background: #3a0519;
+    position: sticky;   /* <- eto binago ko para kapag iniiscroll di nawawala yung header */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ff7b9c;
+    font-weight: 600;
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    margin-left: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: #FCF5EE;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #92487A;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: flex;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #3a0519;
+    min-width: 130px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.dropdown-content a {
+    padding: 12px 15px;
+    display: block;
+    margin: 0;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background: #92487A;
+    color: #FFEDFA;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HAMBURGER (hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 900;
+}
+
+.overlay.show {
+    display: block;
+}
+
+.logo {
+    margin-right: auto;
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img { 
+    position: absolute;
+    left: 50px;
+    top: 15px;
+    height: 80px;
+    width: 100px;
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.hero-content {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-content img {
+    opacity: 80%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffedfa;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    text-shadow: 5px 5px 2px black;
+    font-family: 'Times New Roman', serif;
+    font-size: 38px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.hero-text h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 150px;
+    margin-bottom: 15px;
+    color: #ffedfa;
+    text-shadow: 5px 5px 2px black;
+    
+}
+
+.hero-text p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffedfa;
+    text-shadow: 0 0 40px black;
+    
+}
+
+
+h2 {
+    font-size: 42px; 
+    color: #FFEDFA;
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 20px 30px;
+}
+
+/* Hover boxes font size */
+h3 {
+    font-size: 28px;
+    color: #FFEDFA;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Paragraph font size */
+p {
+    font-size: 20px;
+    color: #FFEDFA;
+    line-height: 1.8;
+}
+
+section {
+    padding: 50px 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section + section {
+    padding-top: 25px; 
+}
+
+.story {
+    max-width: 1100px;
+    margin: auto;
+    line-height: 2;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* ================= PORTFOLIO IMAGES GRID (UPDATED) ================= */
+/* ================= PORTFOLIO IMAGES GRID (ORIGINAL LOOK - 3x2 WRAP) ================= */
+.portfolio-section {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center; /* Centers the 2 bottom cards under the top 3 */
+    gap: 40px;               /* Your original 40px gap */
+    flex-wrap: wrap;         /* Allows items to break into multiple rows */          
+    padding: 20px 10px;          
+    width: 100%;
+}
+
+/* Base style for smaller image boxes (Your exact original values) */
+.gallery .box {
+    position: relative;
+    width: 24%; /* Your original size so they look exactly like your first picture */
+    min-width: 220px;
+    height: 280px; /* Your original height */
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #FFEDFA;
+    background: #3A0519;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+/* Image containment rules */
+.gallery .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Back to your original zoom/fill behavior */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Mechanics for Entire Box Element */
+.gallery .box:hover {
+    transform: translateY(-8px) scale(1.04); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(231, 188, 222, 0.3);
+}
+
+/* Deeper inner-image zoom effect on box hover */
+.gallery .box:hover img {
+    transform: scale(1.08);
+}
+
+/* Text overlay layout inside boxes */
+.gallery .img-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(58, 5, 25, 0.85);
+    color: #FFEDFA;
+    text-align: center;
+    padding: 12px 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+/* ================= CARDS ================= */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 80px; 
+}
+
+.card {
+    background: #3A0519; 
+    border: 1px solid #FFEDFA; 
+    padding: 40px;
+    width: 380px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    margin-bottom: -50px 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    background: #5A0A2A;
+    cursor: pointer;
+}
+
+.founder {
+    max-width: 650px;
+    margin: 30px auto;
+    background: #3A0519; 
+    border: 1px solid #FFEDFA; 
+    padding: 40px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.founder:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    background: #5A0A2A;
+    cursor: pointer;
+}
+
+.commitment .card {
+    width: 300px;
+}
+
+a {
+   color: #FFEDFA; 
+   text-decoration: none;
+   font-size: 18px;
+}
+
+/* CALL TO ACTION */
+
+.cta-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("cta-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px; /* limit ng width */
+    margin: 50px auto 50px auto;  /* para ma-center horizontally */
+    border-radius: 12px; /* optional, para rounded edges */
+}
+
+.cta-section h2{
+    font-family: 'Times New Roman', serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.cta-section h2 span{
+    color: #ffb2b2;
+}
+
+.cta-section p{
+    color: #ccc;
+    font-size: 16px;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cta-btn{
+    padding: 14px 30px;
+    background: #E7BCDE;
+    border: none;
+    color: #56021F;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cta-btn:hover{
+    background: #56021F;
+    color: #FFEDFA;
+}
+  
+/* FOOTER HOMEPAGE */
+footer {
+    background: #3a0519;
+    padding: 20px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+/* 3 COLUMNS LAYOUT */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+/* LEFT */
+.footer-left {
+    flex: 1.2;
+    min-width: 250px;
+}
+
+.footer-logo img {
+    width: 280px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.footer-description {
+    margin: 3px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* CENTER (CONTACT INFO) */
+.footer-center {
+    flex: 1;
+    min-width: 220px;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 120px;
+}
+
+.footer-center h3 {
+    margin-bottom: 6px;
+    font-size: 24px;
+}
+
+.footer-center p {
+    margin: 3px 0;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+/* RIGHT (QUICK LINKS) */
+.footer-right {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 200px;
+}
+
+.footer-right a {
+    font-size: 20px;
+}
+
+.footer-right h3 {
+    margin-bottom: 6px;
+    font-size: 24px;
+}
+
+/* LINKS */
+.footer-right a,
+.footer-dropdown span {
+    display: block;
+    color: #FCF5EE;
+    text-decoration: none;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.footer-right a:hover {
+    color: #FF9BD2;
+}
+
+/* SOCIAL */
+.footer-bottom-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-bottom-social img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-left: -150%;
+}
+
+.footer-bottom-social img:hover {
+    transform: scale(1.2);
+}
+
+/* COPYRIGHT */
+.footer-copy {
+    margin-top: 8px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* nilagay ko para sa pull to the top */
+.back-to-top-text {
+    text-align: center;  /* pang center nung text */
+    margin: 20px 0;      /* spacing sya above/below (vertical) */
+}
+.back-to-top-text a {    
+    display: inline-block; /* need sya for animation */
+    animation: jump 1s infinite; /* ito yung jumping animation */
+}
+.back-to-top-text a:hover {
+    color: #FFEDFA;
+}
+
+/* Jumping animation */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px); /* yung jump height nya*/
+    }
+}
+/* ================= MOBILE PHONES ONLY ================= */
+@media only screen and (max-width: 767px) {
+
+    section {
+        padding: 30px 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin: 20px 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .gallery {
+        gap: 20px; 
+        padding: 10px 5px;
+    }
+
+    .gallery .box {
+        width: 100%;     
+        max-width: 340px;  
+        height: 240px;    
+        margin: 0 auto;    
+    }
+
+    .gallery .box img {
+        object-fit: cover;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .card-container {
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .card, .founder {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-center, 
+    .footer-right {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-bottom-social img {
+        margin-left: 0;
+    }
+}
+
+/* ================= TABLET ONLY (iPad standard) ================= */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 30px 40px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content {
+        height: 55vh !important;
+    }
+
+    .hero-content img {
+        height: 53vh !important;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-btn {
+        top: 89%;
+    }
+
+    .story p {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        text-shadow: 2px 2px 5px #000000;
+    }
+
+    section {
+        padding: 30px 25px;
+        text-shadow: 2px 2px 5px #000000;
+    }
+
+    .wiw {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .gallery .box {
+        width: 45%;
+    }
+    
+    .cta-section {
+        padding: 60px 40px;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .footer-center,
+    .footer-right {
+        margin-left: 0;
+    }
+
+    .footer-logo img {
+        width: 220px;
+    }
+
+    .footer-bottom-social img {
+        margin-left: 0;
+        width: 50px;
+        height: 50px;
+    }
+}

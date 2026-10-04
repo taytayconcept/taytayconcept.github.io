@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNC BOOKING</title>
+    <link rel="icon" href="images/DNC EVENTS LOGO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="phoneresponsive.css">
+
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <div class="logo">
+           <a href="index.html">
+        <img src="images/DNC EVENTS LOGO.png" alt="DNC Events Logo">
+    </a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        <div class="dropdown">
+           <a class="dropbtn">Catering</a>
+        <div class="dropdown-content">
+            <a href="services.html">Services</a>
+            <a href="packages.html">Packages</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        </div>
+            <a href="inquire.html">Inquire</a>
+            <a href="booking.html">Booking</a>
+        </nav>
+    </header>
+
+    <div class="overlay"></div>
+
+    <!-- HERO -->
+
+    <section class="hero">
+    <div class="hero-content">
+       <img src="images/BOOKING - HERO.png" srcset="images/HERO - HOMEPAGE.png 1920w, images/HERO - HOMEPAGE.png 3840w" alt="NC Events">
+        </div>
+    </section> 
+
+    <!-- ===== FORM SECTION ===== -->
+    <div class="section">
+        <div class="form-box">
+            <h2>EVENT BOOKING FORM</h2>
+
+            <form id="eventForm">
+
+
+
+
+                <!-- Full Name -->
+<!-- ================= BOOKING FORM GRID ================= -->
+
+            <div class="booking-grid">
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+                    <label for="name">FULL NAME *</label>
+                    <input type="text"
+                        maxlength="50"
+                        id="name"
+                        placeholder="Enter Your Name"
+                        required
+                        oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="email">EMAIL ADDRESS *</label>
+                    <input type="email"
+                        id="email"
+                        placeholder="Enter Your @email.com"
+                        required>
+                </div>
+
+                <!-- PHONE -->
+                <div class="form-group">
+                    <label for="phone">PHONE NUMBER *</label>
+                    <input type="text"
+                        id="phone"
+                        placeholder="09XX-XXX-XXXX"
+                        maxlength="13"
+                        required>
+                </div>
+
+                <!-- EVENT DATE -->
+                <div class="form-group">
+                    <label for="eventDate">EVENT DATE *</label>
+                    <input type="date"
+                        id="eventDate"
+                        required>
+                </div>
+
+                <!-- EVENT TYPE -->
+                <div class="form-group">
+                    <label for="eventType">EVENT TYPE *</label>
+                    <select id="eventType" required>
+                        <option value="">SELECT EVENT TYPE</option>
+                        <option>ALL-IN WEDDING</option>
+                        <option>BASIC WEDDING</option>
+                        <option>KIDDIE BIRTHDAY PARTY</option>
+                        <option>BAPTISM / GENDER REVEAL</option>
+                        <option>DEBUT / MILESTONE</option>
+                    </select>
+                </div>
+
+                <!-- GUEST COUNT -->
+                <div class="form-group">
+                    <label for="guestCount">GUEST COUNT *</label>
+                    <input type="number"
+                        id="guestCount"
+                        placeholder="Guest Count"
+                        min="20"
+                        max="200"
+                        required>
+                </div>
+
+            </div>
+
+
+
+                    <!-- eto binago ko -->
+                    <!-- LOCATION + MAP + GUEST -->
+            <div class="booking-top-row">
+
+                <!-- LEFT SIDE -->
+                <div class="booking-left">
+
+                    <!-- LOCATION -->
+                        <div class="location-search-row">
+                            <input type="text" placeholder="Search Event Location">
+                            <button id="searchLocation" class="search-icon">🔍</button>
+                        </div>
+
+                </div>
+
+                <!-- RIGHT SIDE / MAP -->
+                <div class="booking-right">
+                    <iframe
+                        id="googleMap"
+                        src="https://maps.google.com/maps?q=Southern%20Leyte&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+
+            </div>
+
+
+
+
+
+
+                <!-- Services -->
+                <div class="servicess">
+                    <p class="services-title">SERVICES NEEDED *</p>
+                    <div class="services-grid">
+                        <label class="service-box">
+                            <input type="checkbox" name="services">
+                            <span>CATERING SERVICES</span>
+                        </label>
+
+                        <label class="service-box">
+                            <input type="checkbox" name="services">
+                            <span>VENUE STYLING</span>
+                        </label>
+
+                        <label class="service-box">
+                            <input type="checkbox" name="services">
+                            <span>EVENT FURNITURE SETUP</span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <!-- Packages -->
+                <div class="services packages">
+                    <p class="services-title">PACKAGES NEEDED *</p>
+                    <div class="packages-grid">
+
+                        <!-- ALL-IN WEDDING -->
+                        <label class="service-box package-box">
+                            <input type="radio" name="packages">
+                            <span>ALL-IN WEDDING PACKAGE</span>
+
+                            <details class="package-toggle">
+                                <summary>View Inclusion</summary>
+                                <div class="package-details">
+                                    <h3><center>INCLUSIONS:</center></h3>
+                                    <ul>
+                                        <li>4 MAIN DISH (Beef, Pork, Chicken, Fish)</li>
+                                        <li>Pasta</li>
+                                        <li>Dessert</li>
+                                        <li>Drinks</li>
+                                        <li>Steamed Rice</li>
+
+                                        <strong><h3><center>VENUE HALL</center></h3></strong>
+                                        <li>Stage Backdrop</li>
+                                        <li>Welcome Board</li>
+                                        <li>Red Carpet</li>
+                                        <li>Wine</li>
+                                        <li>Cake Cutting Utensils</li>
+                                        <li>Emcee</li>
+                                        <li>2 Layer Cake</li>
+                                        <li>20 pcs Invitation (Regular)</li>
+                                        <li>Aisle Design</li>
+
+                                        <strong><h3><center>OTHER AMENITIES</center></h3></strong>
+                                        <li>Couch</li>
+                                        <li>Long Table for Sponsors</li>
+                                        <li>Round Tables</li>
+                                        <li>Monoblock Chairs</li>
+                                        <li>Lights and Sounds System</li>
+                                        <li>Wedding Candle for Ceremony</li>
+                                        <li>Photo Coverage</li>
+                                        <li>Wedding Arch</li>
+                                        <li>Venue Coordinator</li>
+                                        <li>Bride's Hair and Makeup</li>
+                                        <li>Table Centerpiece and Table Number</li>
+                                        <li>Gift, Cake, Buffet and Couple's Table</li>
+                                        <li>Waiters and Food Servers</li>
+                                        <li>Food Warmers, Glasswares and Silverware</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </label>
+
+                        <!-- BASIC WEDDING -->
+                        <label class="service-box package-box">
+                            <input type="radio" name="packages">
+                            <span>BASIC WEDDING PACKAGE</span>
+
+                            <details class="package-toggle">
+                                <summary>View Inclusion</summary>
+                                <div class="package-details">
+                                    <h3><center>INCLUSIONS:</center></h3>
+                                    <ul>
+                                        <li>4 MAIN DISH (Beef, Pork, Chicken, Fish)</li>
+                                        <li>Pasta</li>
+                                        <li>Dessert</li>
+                                        <li>Drinks</li>
+                                        <li>Steamed Rice</li>
+
+                                        <strong><h3><center>VENUE HALL</center></h3></strong>
+                                        <li>Stage Backdrop</li>
+                                        <li>Welcome Board</li>
+                                        <li>Red Carpet</li>
+                                        <li>Cake Cutting Utensils</li>
+                                        <li>Wedding Arch</li>
+
+                                        <strong><h3><center>OTHER AMENITIES</center></h3></strong>
+                                        <li>Couch</li>
+                                        <li>Long Table for Sponsors</li>
+                                        <li>Round Tables</li>
+                                        <li>Monoblock Chairs</li>
+                                        <li>Table Centerpiece and Table Number</li>
+                                        <li>Gift, Cake, Buffet and Couple's Table</li>
+                                        <li>Waiters and Food Servers</li>
+                                        <li>Food Warmers, Glasswares and Silverware</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </label>
+
+                        <!-- KIDDIE PARTY -->
+                        <label class="service-box package-box">
+                            <input type="radio" name="packages">
+                            <span>KIDDIE BIRTHDAY PARTY</span>
+
+                            <details class="package-toggle">
+                                <summary>View Inclusion</summary>
+                                <div class="package-details">
+                                    <h3><center>INCLUSIONS:</center></h3>
+                                    <ul>
+                                        <li>4 MAIN DISH (Beef, Pork, Chicken, Fish)</li>
+                                        <li>Pasta</li>
+                                        <li>Dessert</li>
+                                        <li>Drinks</li>
+                                        <li>Steamed Rice</li>
+
+                                        <strong><h3><center>KIDS MEAL</center></h3></strong>
+                                        <li>Chicken and Rice</li>
+
+                                        <strong><h3><center>VENUE HALL</center></h3></strong>
+                                        <li>Celebrant's Chair</li>
+                                        <li>Table Centerpiece</li>
+                                        <li>Table Number</li>
+                                        <li>Table and Chairs</li>
+                                        <li>Celebrant's Name (Styro or Letter Stand)</li>
+                                        <li>BALLOONS DECORATION (Garland, Arch)</li>
+                                        <li>Tarpaulin Character Standee</li>
+
+                                        <strong><h3><center>OTHER AMENITIES</center></h3></strong>
+                                        <li>Buffet Table</li>
+                                        <li>Cake Table</li>
+                                        <li>Gift Table</li>
+                                        <li>Souvenir/Loot Bags Rack</li>
+                                        <li>Complete Set of Utensils</li>
+                                        <li>Food Warmer</li>
+                                        <li>Waiters and Food Servers</li>
+                                        <li>Welcome Board</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </label>
+
+                        <!-- CHRISTENING -->
+                        <label class="service-box package-box">
+                            <input type="radio" name="packages">
+                            <span>CHRISTENING / BABY SHOWER</span>
+
+                            <details class="package-toggle">
+                                <summary>View Inclusion</summary>
+                                <div class="package-details">
+                                    <h3><center>INCLUSIONS:</center></h3>
+                                    <ul>
+                                        <li>4 MAIN DISH (Beef, Pork, Chicken, Fish)</li>
+                                        <li>Pasta</li>
+                                        <li>Dessert</li>
+                                        <li>Drinks</li>
+                                        <li>Steamed Rice</li>
+
+                                        <strong><h3><center>VENUE HALL</center></h3></strong>
+                                        <li>Celebrant's Chair</li>
+                                        <li>Table Centerpiece</li>
+                                        <li>Table Number</li>
+                                        <li>Table and Chairs</li>
+                                        <li>Celebrant's Name (Styro or Letter Stand)</li>
+                                        <li>BALLOONS DECORATION</li>
+                                        <li>Tarpaulin Character Standee</li>
+
+                                        <strong><h3><center>OTHER AMENITIES</center></h3></strong>
+                                        <li>Buffet Table</li>
+                                        <li>Cake Table</li>
+                                        <li>Gift Table</li>
+                                        <li>Complete Set of Utensils</li>
+                                        <li>Food Warmer</li>
+                                        <li>Waiters and Food Servers</li>
+                                        <li>Welcome Board</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </label>
+
+                        <!-- DEBUT -->
+                        <label class="service-box package-box">
+                            <input type="radio" name="packages">
+                            <span>DEBUT PACKAGE</span>
+
+                            <details class="package-toggle">
+                                <summary>View Inclusion</summary>
+                                <div class="package-details">
+                                    <h3><center>INCLUSIONS:</center></h3>
+                                    <ul>
+                                        <li>4 MAIN DISH (Beef, Pork, Chicken, Fish)</li>
+                                        <li>Pasta</li>
+                                        <li>Dessert</li>
+                                        <li>Drinks</li>
+                                        <li>Steamed Rice</li>
+
+                                        <strong><h3><center>VENUE HALL</center></h3></strong>
+                                        <li>Stage Backdrop</li>
+                                        <li>Celebrant's Chair</li>
+                                        <li>Table Centerpiece</li>
+                                        <li>Table Number</li>
+                                        <li>Celebrant's Name (Styro or Letter Stand)</li>
+                                        <li>Round Dining Table</li>
+                                        <li>Red Carpet</li>
+                                        <li>Arch</li>
+
+                                        <strong><h3><center>OTHER AMENITIES</center></h3></strong>
+                                        <li>Buffet Table</li>
+                                        <li>Cake Table</li>
+                                        <li>Gift Table</li>
+                                        <li>Souvenir/Loot Bags Rack/Table</li>
+                                        <li>Complete Set of Utensils</li>
+                                        <li>Waiters and Food Servers</li>
+                                        <li>Welcome Board</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Event Details -->
+                <div class="form-group">
+                    <label for="details">EVENT DETAILS *</label>
+                    <textarea id="details" placeholder="Tell us more about your event..." required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Book Event</button>
+                <p id="statusMessage"></p>
+            </form>
+
+            <!-- Contact Section -->
+          <div class="contact">
+
+    <a href="#" class="contact-box" data-type="phone">
+        📞<br>Call Us
+        <div class="contact-popup">0956 251 3213</div>
+    </a>
+
+    <a href="#" class="contact-box" data-type="email">
+        ✉️<br>Email Us                         
+        <div class="contact-popup">dncevents@gmail.com</div>
+    </a>
+
+    <a href="#" class="contact-box" data-type="location">
+        📍<br>Visit Us
+        <div class="contact-popup">
+             L. Wood St,  Javier Compound, 1920, Taytay, Rizal</div>
+    </a>
+
+</div>
+    </div>
+        </div>
+    </div>
+
+<!-- BACK TO TOP BUTTON BELOW CTA -->
+         <div class="back-to-top-text">
+             <a href="#" id="back-to-top">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 15 12 9 18 15"></polyline>
+                    <polyline points="6 9 12 3 18 9"></polyline>
+            </svg>
+            </a>
+        </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+    <div class="footer-content">
+
+        <!-- LEFT -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="images/DNC EVENTS LOGO.png" alt="">
+            </div>
+
+            <p class="footer-description">
+                DNC Events offers affordable 
+                catering services with elegant 
+                buffet styling and professional 
+                event coordination for seamless, 
+                memorable celebrations.
+            </p>
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer-center">
+            <h3>CONTACT US</h3>
+            <p>🕖 7:00 AM - 10:00 PM | Monday - Sunday</p>
+            <p>📍 Lwood Street Javier Compound
+            Brgy. Dolores, Taytay, Rizal</p>
+            <p>📞 0956 251 3213</p>
+
+            <div class="footer-bottom-social">
+                <a href="https://www.facebook.com/share/14QaafsE15N/?mibextid=wwXIfr"><img src="images/FOOTER - FACEBOOK ICON.png"></a>
+                <a href="https://www.instagram.com/hiiamdanica?igsh=emtkZmtjdzR0ZDdv"><img src="images/FOOTER - IG ICON.png"></a>
+                <a href="https://www.tiktok.com/@dncevents?_r=1&_t=ZS-94Y4OxuLlOC"><img src="images/FOOTER - TIKTOK ICON.png"></a>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+            <h3>QUICK LINKS</h3>
+               <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="packages.html">Packages</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="inquire.html">Inquire</a>
+                <a href="booking.html">Booking</a>
+            </div>
+        </div>
+
+            <div class="footer-copy">
+                Copyright © 2026 DNC Events. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="booking.js"></script>
+
+</body>
+</html>

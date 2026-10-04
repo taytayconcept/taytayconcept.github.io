@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNC INQUIRE</title>
+  <link rel="icon" href="images/DNC EVENTS LOGO.png">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="inquire.css">
+<link rel="stylesheet" href="phoneresponsive.css">
+
+</head>
+<body>
+  <!-- NAVBAR -->
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+        <img src="images/DNC EVENTS LOGO.png" alt="DNC Events Logo">
+    </a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        <div class="dropdown">
+           <a class="dropbtn">Catering</a>
+        <div class="dropdown-content">
+            <a href="services.html">Services</a>
+            <a href="packages.html">Packages</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="faqs.html">FAQs</a>
+        </div>
+        </div>
+            <a href="inquire.html">Inquire</a>
+            <a href="booking.html">Booking</a>
+        </nav>
+    </header>
+    
+    <div class="overlay"></div> 
+
+    <!-- HERO -->
+
+    <section class="hero">
+    <div class="hero-content">
+       <img src="images/INQUIRE - HERO.png" srcset="images/HERO - HOMEPAGE.png 1920w, images/HERO - HOMEPAGE.png 3840w" alt="NC Events">
+        </div>
+    </section> 
+
+  <div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="info">
+      <h2>GET IN TOUCH WITH US!</h2>
+
+      <b>OUR LOCATION</b>
+      <p><em>
+        Lwood Street Javier Compound<br>
+        Brgy. Dolores 1920, Taytay, Rizal<br>
+        Philippines.
+      </p></em>
+
+      <!-- GOOGLE MAP -->
+      <!-- GOOGLE MAP WITH PIN -->
+<div class="map-container">
+  <iframe 
+    width="100%" 
+    height="250" 
+    style="border:0; border-radius:12px;" 
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61783.44180605113!2d121.1345766590678!3d14.57255285963115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7004288dde7%3A0x6eb1fb6d8ee59988!2s99%20Int.%20L.%20Wood!5e0!3m2!1sen!2sph!4v1774076757239!5m2!1sen!2sph" 
+    allowfullscreen 
+    loading="lazy">
+  </iframe>
+</div>
+
+      <b>PHONE NUMBER</b>
+      <p><em>+63 956 251 3213</em></p>
+
+      <b>EMAIL ADDRESS</b>
+      <p><em>dncevents@gmail.com</em></p>
+
+      <b>BUSINESS HOURS</b>
+      <p><em>
+        MONDAY - SUNDAY: <strong>7:00 AM - 10:00 PM<br></strong>
+        MONDAY - SATURDAY: <strong>By Walk-in Only.<br></strong>
+        SUNDAY: <strong>By Appointment Only.</strong>
+      </em></p>
+
+      <b>FOLLOW US</b>
+      <div class="social">
+        <a href="https://www.facebook.com/share/14QaafsE15N/?mibextid=wwXIfr" target="_blank" class="facebook">
+          <img src="images/FOOTER - FACEBOOK ICON.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/hiiamdanica?igsh=emtkZmtjdzR0ZDdv" target="_blank" class="instagram">
+          <img src="images/FOOTER - IG ICON.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@dncevents?_r=1&_t=ZS-94Y4OxuLlOC" target="_blank" class="tiktok">
+          <img src="images/FOOTER - TIKTOK ICON.png" alt="TikTok">
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+   <div class="form">
+  <h2>SEND US MESSAGE</h2>
+
+  <form id="inquiryForm">
+
+    <label>YOUR NAME *</label>
+    <input type="text" maxlength="50" id="name" placeholder="Enter Your Name" required
+     oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
+    
+    <label>PHONE NUMBER *</label>
+    <input type="text" id="phone" placeholder="09XX-XXX-XXXX" maxlength="13" required>
+
+    <label>EMAIL ADDRESS *</label>
+    <input type="email" id="email" placeholder="Enter Your @email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+    <label>SUBJECT *</label>
+    <input type="text" id="subject" placeholder="What is this regarding?" required>
+
+    <label>MESSAGE *</label>
+    <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
+
+    <button type="submit" id="submitBtn">SEND MESSAGE</button>
+
+  </form>
+
+   <p id="statusMessage"></p>
+</div>
+</div>
+
+
+ <!-- FOOTER -->
+
+    <footer class="footer">
+    <div class="footer-content">
+
+        <!-- LEFT -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="images/DNC EVENTS LOGO.png" alt="">
+            </div>
+
+            <p class="footer-description">
+                DNC Events offers affordable 
+                catering services with elegant 
+                buffet styling and professional 
+                event coordination for seamless, 
+                memorable celebrations.
+            </p>
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer-center">
+            <h3>CONTACT US</h3>
+            <p>🕖 7:00 AM - 10:00 PM | Monday - Sunday</p>
+            <p>📍 Lwood Street Javier Compound
+            Brgy. Dolores, Taytay, Rizal</p>
+            <p>📞 0956 251 3213</p>
+
+            <div class="footer-bottom-social">
+                <a href="https://www.facebook.com/share/14QaafsE15N/?mibextid=wwXIfr"><img src="images/FOOTER - FACEBOOK ICON.png"></a>
+                <a href="#"><img src="images/FOOTER - IG ICON.png"></a>
+                <a href="https://www.tiktok.com/@dncevents?_r=1&_t=ZS-94Y4OxuLlOC"><img src="images/FOOTER - TIKTOK ICON.png"></a>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+            <h3>QUICK LINKS</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="packages.html">Packages</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="inquire.html">Inquire</a>
+                <a href="booking.html">Booking</a>
+            </div>
+        </div>
+
+            <div class="footer-copy">
+                Copyright © 2026 DNC Events. All Rights Reserved.
+        </div>
+    </footer>
+    
+    <script src="inquire.js"></script>
+
+</body>
+</html>
